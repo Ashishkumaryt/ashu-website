@@ -236,3 +236,29 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
+// Typing text animation for "Hi, I'm Ashish Kumar"
+const text = "Hi, I'm Ashish Kumar";
+let index = 0;
+let isTyping = true;
+
+function typeTitle() {
+  const typingText = document.getElementById("typing-text");
+
+  if (!typingText) return;
+
+  if (index <= text.length) {
+    typingText.innerHTML = text.substring(0, index++);
+    setTimeout(typeTitle, 100);
+  }
+}
+
+// Blinking cursor effect
+setInterval(() => {
+  const cursor = document.getElementById("cursor");
+  if (cursor) {
+    cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
+  }
+}, 500);
+
+// Start typing on load
+window.addEventListener("DOMContentLoaded", typeTitle);
