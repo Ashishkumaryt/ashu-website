@@ -238,21 +238,16 @@ if (GetDeviceType() === "desktop") {
 }
 window.addEventListener("DOMContentLoaded", () => {
     const typingText = document.getElementById("typing-text");
-    const text = "Hi, I'm Ashish Kumar";
+    const text = `My name is <span class="text-purple-500">Ashish Kumar</span>`;
     let charIndex = 0;
 
     function type() {
         if (charIndex <= text.length) {
-            typingText.textContent = text.substring(0, charIndex);
+            typingText.innerHTML = text.substring(0, charIndex);
             charIndex++;
             setTimeout(type, 100);
-        } else {
-            setTimeout(() => {
-                charIndex = 0;
-                type();
-            }, 2000); // 2 second pause before restarting
         }
     }
 
-    type();
+    type(); // run only once on page load
 });
