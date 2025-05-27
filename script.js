@@ -236,34 +236,6 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
-const text = "My name is Ashish Kumar";
-const nameText = "Ashish Kumar";
-let index = 0;
-
-function typeTitle() {
-  const typingText = document.getElementById("typing-text");
-
-  if (!typingText) return;
-
-  if (index <= text.length) {
-    let displayedText = text.substring(0, index);
-
-    // Agar "Ashish Kumar" tak type ho gaya hai toh usko blue kar do
- document.addEventListener("DOMContentLoaded", function () {
-  const text = 'My name is <span class="text-purple-500">Ashish Kumar</span>.';
-  const typingEl = document.getElementById("typing-text");
-  let index = 0;
-
-  function type() {
-    typingEl.innerHTML = text.slice(0, index);  // HTML supported
-    index++;
-    if (index <= text.length) {
-      setTimeout(type, 100);
-    }
-  }
-
-  type();
-});
 
 window.addEventListener("DOMContentLoaded", typeTitle);
 const hour = new Date().getHours();
