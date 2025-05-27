@@ -237,7 +237,7 @@ if (GetDeviceType() === "desktop") {
     twinkleStar();
 }
 // Typing text animation for "I'm Ashish Kumar"
-const text = "I'm Ashish Kumar";
+const text = "My Name is Ashish Kumar";
 let index = 0;
 
 function typeTitle() {
