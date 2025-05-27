@@ -236,7 +236,7 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
-const text = "Hi, I'm Ashish Kumar";
+const text = "My name is Ashish Kumar";
 let index = 0;
 let isTyping = true;
 
@@ -250,14 +250,6 @@ function typeTitle() {
     setTimeout(typeTitle, 100);
   }
 }
-
-// Blinking cursor effect
-setInterval(() => {
-  const cursor = document.getElementById("cursor");
-  if (cursor) {
-    cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
-  }
-}, 500);
 
 // Start typing on load
 window.addEventListener("DOMContentLoaded", typeTitle);
