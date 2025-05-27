@@ -132,7 +132,7 @@ function CreateFallingStars() {
 }
 
 function AutoCalculateAge() {
-    const BirthDate = new Date(2010, 7, 7);
+    const BirthDate = new Date(2009, 6, 6);
     const today = new Date();
     let years = today.getFullYear() - BirthDate.getFullYear();
     let months = today.getMonth() - BirthDate.getMonth();
@@ -150,7 +150,7 @@ function AutoCalculateAge() {
 }
 
 function AutoCalculateYearsOfExperience() {
-    const YearsOfExperienceDate = new Date(2020, 0, 1);
+    const YearsOfExperienceDate = new Date(2023, 0, 1);
     const today = new Date();
     let years = today.getFullYear() - YearsOfExperienceDate.getFullYear();
 
