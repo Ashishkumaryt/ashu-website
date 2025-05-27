@@ -236,19 +236,6 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
-
-window.addEventListener("DOMContentLoaded", typeTitle);
-const hour = new Date().getHours();
-let greet = "";
-
-if (hour < 12) {
-  greet = "Good Morning, Dear! ☀️";
-} else if (hour < 18) {
-  greet = "Good Afternoon, Dear! 🌤️";
-} else {
-  greet = "Good Evening, Dear! 🌙";
-}
-document.getElementById("greeting").innerText = greet;
 window.addEventListener("DOMContentLoaded", () => {
     const typingText = document.getElementById("typing-text");
     const text = "Hi, I'm Ashish Kumar";
