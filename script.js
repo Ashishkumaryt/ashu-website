@@ -236,20 +236,49 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
-const text = "My name is Ashish Kumar";
-let index = 0;
-let isTyping = true;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Animation</title>
+  <style>
+    #typing-text {
+      font-size: 24px;
+      font-family: monospace;
+    }
+    .purple {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div id="typing-text"></div>
 
-function typeTitle() {
-  const typingText = document.getElementById("typing-text");
+  <script>
+    const normalPart = "My name is ";
+    const coloredPart = "Ashish Kumar";
+    const fullText = normalPart + coloredPart;
+    let index = 0;
 
-  if (!typingText) return;
+    function typeTitle() {
+      const typingText = document.getElementById("typing-text");
 
-  if (index <= text.length) {
-    typingText.innerHTML = text.substring(0, index++);
-    setTimeout(typeTitle, 100);
-  }
-}
+      if (!typingText) return;
 
-// Start typing on load
-window.addEventListener("DOMContentLoaded", typeTitle);
+      if (index <= fullText.length) {
+        let currentText = fullText.substring(0, index++);
+        if (currentText.length <= normalPart.length) {
+          typingText.innerHTML = currentText;
+        } else {
+          let normal = currentText.substring(0, normalPart.length);
+          let colored = currentText.substring(normalPart.length);
+          typingText.innerHTML = `${normal}<span class="purple">${colored}</span>`;
+        }
+        setTimeout(typeTitle, 100);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", typeTitle);
+  </script>
+</body>
+</html>
