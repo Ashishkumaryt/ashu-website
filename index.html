@@ -96,55 +96,7 @@
   } else {
     greet = "Good Evening, Dear! 🌙";
   }
-
   document.getElementById("greeting").innerText = greet;
-</script>
-    <div class="mt-6">
-  <input type="text" id="nameInput" placeholder="Enter your name" class="px-3 py-2 rounded text-black" />
-  <button id="setNameBtn" class="ml-2 px-3 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">
-    Set Name
-  </button>
-</div>
-    <!-- Greeting text jahan update hoga -->
-<h2 id="greeting" class="text-purple-600 text-xl font-semibold mb-2"></h2>
-
-<!-- Name input aur button -->
-<input type="text" id="nameInput" placeholder="Enter your name" class="p-2 rounded border border-gray-500 text-black" />
-<button id="setNameBtn" class="ml-2 px-3 py-1 bg-purple-600 text-white rounded hover:bg-purple-700 transition">Set Name</button>
-
-<script>
-  const greetingElement = document.getElementById("greeting");
-  const nameInput = document.getElementById("nameInput");
-  const setNameBtn = document.getElementById("setNameBtn");
-
-  function getGreeting(name) {
-    const hour = new Date().getHours();
-    let greet = "";
-
-    if (hour < 12) {
-      greet = `Good Morning, ${name}! ☀️`;
-    } else if (hour < 18) {
-      greet = `Good Afternoon, ${name}! 🌤️`;
-    } else {
-      greet = `Good Evening, ${name}! 🌙`;
-    }
-
-    return greet;
-  }
-
-  // Page load par default greeting
-  greetingElement.innerText = getGreeting("Dear");
-
-  // Button click se greeting update karo
-  setNameBtn.addEventListener("click", () => {
-    const enteredName = nameInput.value.trim();
-    if (enteredName.length > 0) {
-      greetingElement.innerText = getGreeting(enteredName);
-      nameInput.value = "";
-    } else {
-      alert("Please enter a name!");
-    }
-  });
 </script>
 </body>
 </html>
