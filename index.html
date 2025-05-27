@@ -2,39 +2,66 @@
 <html lang="en">
 
 <head>
-    <!-- (Sab head ka content same hai tumhara) -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ashish Kumar's personal portfolio showcasing skills, projects, and tools in web development, backend, and more.">
-    <meta name="keywords" content="web development, programming, Python, JavaScript, TypeScript, Flask, Node.js, MongoDB, Docker, Git, React Native, Rust, development tools, portfolio">
-    <meta name="author" content="Ashish Kumar">
-    <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ashish Kumar's personal portfolio showcasing skills, projects, and tools in web development, backend, and more."
+    />
+    <meta
+      name="keywords"
+      content="web development, programming, Python, JavaScript, TypeScript, Flask, Node.js, MongoDB, Docker, Git, React Native, Rust, development tools, portfolio"
+    />
+    <meta name="author" content="Ashish Kumar" />
+    <meta name="theme-color" content="#000000" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Ashish Kumar">
-    <meta property="og:description" content="Explore Ashish Kumar's skills, tools, and ongoing development projects in the tech industry.">
-    <meta property="og:url" content="https://Ashish Kumar">
-    <meta property="og:site_name" content="Ashish Kumar">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ashish Kumar" />
+    <meta
+      property="og:description"
+      content="Explore Ashish Kumar's skills, tools, and ongoing development projects in the tech industry."
+    />
+    <meta property="og:url" content="https://Ashish Kumar" />
+    <meta property="og:site_name" content="Ashish Kumar" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ashish Kumar">
-    <meta name="twitter:description" content="Explore Ashish Kumar's skills, tools, and ongoing development projects in the tech industry.">
-    <meta name="twitter:url" content="https://Ashish Kumar">
-    <meta name="twitter:site" content="Ashish Kumar">
-    <meta name="twitter:creator" content="Ashish Kumar">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ashish Kumar" />
+    <meta
+      name="twitter:description"
+      content="Explore Ashish Kumar's skills, tools, and ongoing development projects in the tech industry."
+    />
+    <meta name="twitter:url" content="https://Ashish Kumar" />
+    <meta name="twitter:site" content="Ashish Kumar" />
+    <meta name="twitter:creator" content="Ashish Kumar" />
 
     <title>Ashish Kumar</title>
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/assets/fonts/SimpleHandmade.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/SimpleHandmade.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-black overflow-hidden flex flex-col h-screen text-white">
+<body class="bg-black overflow-hidden flex flex-col h-screen">
     <nav class="bg-black text-white shadow-md pt-4">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
@@ -48,16 +75,11 @@
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start hidden sm:flex">
                     <a class="flex-shrink-0 text-3xl font-bold" href="index.html">Ashish Kumar</a>
                 </div>
-                <div class="hidden sm:flex sm:space-x-8 items-center">
-                    <!-- THEME TOGGLE BUTTON ADDED HERE -->
-                    <button id="ThemeToggleBtn" class="text-white px-3 py-1 rounded hover:bg-blue-600 hover:text-white transition duration-300 focus:outline-none">
-                        Light Mode
-                    </button>
-
-                    <a href="index.html" class="text-white hover:text-purple-500 transition duration-500 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">Home</a>
-                    <a href="about.html" class="text-white hover:text-purple-500 transition duration-500 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">About</a>
-                    <!-- <a href="projects.html" class="text-white hover:text-purple-500 transition duration-500 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">Projects</a> -->
-                    <a href="contact.html" class="text-white hover:text-purple-500 transition duration-500 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">Contact</a>
+                <div class="hidden sm:flex sm:space-x-8">
+                    <a href="index.html" class="text-white hover:text-purple-500 transition duration-500">Home</a>
+                    <a href="about.html" class="text-white hover:text-purple-500 transition duration-500">About</a>
+                    <!-- <a href="projects.html" class="text-white hover:text-purple-500 transition duration-500">Projects</a> -->
+                    <a href="contact.html" class="text-white hover:text-purple-500 transition duration-500">Contact</a>
                 </div>
             </div>
         </div>
@@ -104,36 +126,6 @@
   }
   document.getElementById("greeting").innerText = greet;
 </script>
-
-<!-- THEME TOGGLE SCRIPT ADDED HERE -->
-<script>
-  const body = document.body;
-  const themeBtn = document.getElementById('ThemeToggleBtn');
-
-  // Check saved theme on load
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    body.classList.remove('bg-black', 'text-white');
-    body.classList.add('bg-white', 'text-black');
-    themeBtn.textContent = 'Dark Mode';
-  }
-
-  themeBtn.addEventListener('click', () => {
-    if (body.classList.contains('bg-black')) {
-      // Switch to light
-      body.classList.remove('bg-black', 'text-white');
-      body.classList.add('bg-white', 'text-black');
-      themeBtn.textContent = 'Dark Mode';
-      localStorage.setItem('theme', 'light');
-    } else {
-      // Switch to dark
-      body.classList.remove('bg-white', 'text-black');
-      body.classList.add('bg-black', 'text-white');
-      themeBtn.textContent = 'Light Mode';
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-</script>
+<script src="script.js" defer></script>
 </body>
-
 </html>
