@@ -236,8 +236,8 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
-// Typing text animation for "I'm Ashish Kumar"
-const text = "My Name is Ashish Kumar And,";
+const text = "My name is Ashish Kumar, And";
+const nameText = "Ashish Kumar";
 let index = 0;
 
 function typeTitle() {
@@ -246,10 +246,20 @@ function typeTitle() {
   if (!typingText) return;
 
   if (index <= text.length) {
-    typingText.innerHTML = text.substring(0, index++);
+    let displayedText = text.substring(0, index);
+
+    // Agar "Ashish Kumar" tak type ho gaya hai toh usko blue kar do
+    if (index > text.indexOf(nameText)) {
+      const startIndex = text.indexOf(nameText);
+      const beforeName = text.substring(0, startIndex);
+      const namePart = text.substring(startIndex, index);
+      displayedText = beforeName + `<span style="color: #3b82f6;">${namePart}</span>`;  // Blue color (Tailwind blue-500)
+    }
+
+    typingText.innerHTML = displayedText;
+    index++;
     setTimeout(typeTitle, 100);
   }
 }
 
-// Start typing on page load
 window.addEventListener("DOMContentLoaded", typeTitle);
