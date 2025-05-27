@@ -236,7 +236,7 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
-const text = "My name is Ashish Kumar, And";
+const text = "My name is Ashish Kumar";
 const nameText = "Ashish Kumar";
 let index = 0;
 
@@ -263,3 +263,15 @@ function typeTitle() {
 }
 
 window.addEventListener("DOMContentLoaded", typeTitle);
+const hour = new Date().getHours();
+let greet = "";
+
+if (hour < 12) {
+  greet = "Good Morning, Dear! ☀️";
+} else if (hour < 18) {
+  greet = "Good Afternoon, Dear! 🌤️";
+} else {
+  greet = "Good Evening, Dear! 🌙";
+}
+document.getElementById("greeting").innerText = greet;
+
