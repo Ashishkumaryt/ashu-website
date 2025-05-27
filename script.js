@@ -236,18 +236,28 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
-window.addEventListener("DOMContentLoaded", () => {
-    const typingText = document.getElementById("typing-text");
-    const text = `My name is <span class="text-purple-500"> Ashish Kumar </span>`;
-    let charIndex = 0;
+const text = "Hi, I'm Ashish Kumar";
+let index = 0;
+let isTyping = true;
 
-    function type() {
-        if (charIndex <= text.length) {
-            typingText.innerHTML = text.substring(0, charIndex);
-            charIndex++;
-            setTimeout(type, 100);
-        }
-    }
+function typeTitle() {
+  const typingText = document.getElementById("typing-text");
 
-    type(); // run only once on page load
-});
+  if (!typingText) return;
+
+  if (index <= text.length) {
+    typingText.innerHTML = text.substring(0, index++);
+    setTimeout(typeTitle, 100);
+  }
+}
+
+// Blinking cursor effect
+setInterval(() => {
+  const cursor = document.getElementById("cursor");
+  if (cursor) {
+    cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
+  }
+}, 500);
+
+// Start typing on load
+window.addEventListener("DOMContentLoaded", typeTitle);
