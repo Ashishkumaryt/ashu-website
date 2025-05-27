@@ -236,7 +236,7 @@ if (GetDeviceType() === "desktop") {
     CreateShootingStars();
     twinkleStar();
 }
-const text = "My name is <span class="text-purple-600 age">Ashish Kumar";
+const text = "My name is Ashish Kumar";
 let index = 0;
 let isTyping = true;
 
