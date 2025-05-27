@@ -239,7 +239,6 @@ if (GetDeviceType() === "desktop") {
 // Typing text animation for "Hi, I'm Ashish Kumar"
 const text = "Hi, I'm Ashish Kumar";
 let index = 0;
-let isTyping = true;
 
 function typeTitle() {
   const typingText = document.getElementById("typing-text");
@@ -252,13 +251,5 @@ function typeTitle() {
   }
 }
 
-// Blinking cursor effect
-setInterval(() => {
-  const cursor = document.getElementById("cursor");
-  if (cursor) {
-    cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
-  }
-}, 500);
-
-// Start typing on load
+// Start typing on page load
 window.addEventListener("DOMContentLoaded", typeTitle);
