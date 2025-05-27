@@ -114,18 +114,24 @@
         gtag('config', 'G-QM4E7S9PDJ');
     </script>
 <script>
-  const hour = new Date().getHours();
-  let greet = "";
+  document.addEventListener("DOMContentLoaded", function () {
+    const hour = new Date().getHours();
+    let greet = "";
 
-  if (hour < 12) {
-    greet = "Good Morning, Dear! ☀️";
-  } else if (hour < 18) {
-    greet = "Good Afternoon, Dear! 🌤️";
-  } else {
-    greet = "Good Evening, Dear! 🌙";
-  }
-  document.getElementById("greeting").innerText = greet;
+    if (hour < 12) {
+      greet = "Good Morning, Dear! ☀️";
+    } else if (hour < 18) {
+      greet = "Good Afternoon, Dear! 🌤️";
+    } else {
+      greet = "Good Evening, Dear! 🌙";
+    }
+
+    const greetingEl = document.getElementById("greeting");
+    if (greetingEl) {
+      greetingEl.innerText = greet;
+      greetingEl.style.color = "white"; // Make sure text is white
+    }
+  });
 </script>
-<script src="script.js" defer></script>
 </body>
 </html>
