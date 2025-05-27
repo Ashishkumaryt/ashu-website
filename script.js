@@ -253,7 +253,7 @@ function typeTitle() {
     } else {
       let normal = currentText.substring(0, normalPart.length);
       let colored = currentText.substring(normalPart.length);
-      typingText.innerHTML = `${normal}<span class="purple">${colored}</span>`;
+      typingText.innerHTML = `${normal}<span style="color: purple;">${colored}</span>`;
     }
     setTimeout(typeTitle, 100);
   }
