@@ -249,43 +249,23 @@ if (hour < 12) {
   greet = "Good Evening, Dear! 🌙";
 }
 document.getElementById("greeting").innerText = greet;
+window.addEventListener("DOMContentLoaded", () => {
+    const typingText = document.getElementById("typing-text");
+    const text = "Hi, I'm Ashish Kumar";
+    let charIndex = 0;
 
-// Typing Animation for "My name is Ashish Kumar"
-const typingText = document.getElementById("typing-text");
-
-const text1 = "My name is ";
-const text2 = "Ashish Kumar";
-let charIndex = 0;
-let typingPart = 1;
-
-function type() {
-    if (typingPart === 1) {
-        if (charIndex <= text1.length) {
-            typingText.innerHTML = `<span class="text-white">${text1.substring(0, charIndex)}</span>`;
+    function type() {
+        if (charIndex <= text.length) {
+            typingText.textContent = text.substring(0, charIndex);
             charIndex++;
             setTimeout(type, 100);
         } else {
-            typingPart = 2;
-            charIndex = 0;
-            setTimeout(type, 300);
-        }
-    } else if (typingPart === 2) {
-        if (charIndex <= text2.length) {
-            typingText.innerHTML = `<span class="text-white">${text1}</span><span class="text-purple-600">${text2.substring(0, charIndex)}</span>`;
-            charIndex++;
-            setTimeout(type, 100);
-        } else {
-            typingPart = 3;
             setTimeout(() => {
                 charIndex = 0;
-                typingPart = 1;
                 type();
-            }, 2000); // Pause before restart
+            }, 2000); // 2 second pause before restarting
         }
     }
-}
 
-// Start animation on page load
-document.addEventListener("DOMContentLoaded", () => {
     type();
 });
