@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!-- (Sab head ka content same hai tumhara) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ashish Kumar's personal portfolio showcasing skills, projects, and tools in web development, backend, and more.">
@@ -33,7 +34,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-black overflow-hidden flex flex-col h-screen">
+<body class="bg-black overflow-hidden flex flex-col h-screen text-white">
     <nav class="bg-black text-white shadow-md pt-4">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
@@ -47,11 +48,16 @@
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start hidden sm:flex">
                     <a class="flex-shrink-0 text-3xl font-bold" href="index.html">Ashish Kumar</a>
                 </div>
-                <div class="hidden sm:flex sm:space-x-8">
-                    <a href="index.html" class="text-white hover:text-purple-500 transition duration-500">Home</a>
-                    <a href="about.html" class="text-white hover:text-purple-500 transition duration-500">About</a>
-                    <!-- <a href="projects.html" class="text-white hover:text-purple-500 transition duration-500">Projects</a> -->
-                    <a href="contact.html" class="text-white hover:text-purple-500 transition duration-500">Contact</a>
+                <div class="hidden sm:flex sm:space-x-8 items-center">
+                    <!-- THEME TOGGLE BUTTON ADDED HERE -->
+                    <button id="ThemeToggleBtn" class="text-white px-3 py-1 rounded hover:bg-blue-600 hover:text-white transition duration-300 focus:outline-none">
+                        Light Mode
+                    </button>
+
+                    <a href="index.html" class="text-white hover:text-purple-500 transition duration-500 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">Home</a>
+                    <a href="about.html" class="text-white hover:text-purple-500 transition duration-500 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">About</a>
+                    <!-- <a href="projects.html" class="text-white hover:text-purple-500 transition duration-500 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">Projects</a> -->
+                    <a href="contact.html" class="text-white hover:text-purple-500 transition duration-500 px-3 py-1 rounded hover:bg-blue-600 hover:text-white">Contact</a>
                 </div>
             </div>
         </div>
@@ -98,6 +104,36 @@
   }
   document.getElementById("greeting").innerText = greet;
 </script>
-<script src="script.js" defer></script>
+
+<!-- THEME TOGGLE SCRIPT ADDED HERE -->
+<script>
+  const body = document.body;
+  const themeBtn = document.getElementById('ThemeToggleBtn');
+
+  // Check saved theme on load
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.remove('bg-black', 'text-white');
+    body.classList.add('bg-white', 'text-black');
+    themeBtn.textContent = 'Dark Mode';
+  }
+
+  themeBtn.addEventListener('click', () => {
+    if (body.classList.contains('bg-black')) {
+      // Switch to light
+      body.classList.remove('bg-black', 'text-white');
+      body.classList.add('bg-white', 'text-black');
+      themeBtn.textContent = 'Dark Mode';
+      localStorage.setItem('theme', 'light');
+    } else {
+      // Switch to dark
+      body.classList.remove('bg-white', 'text-black');
+      body.classList.add('bg-black', 'text-white');
+      themeBtn.textContent = 'Light Mode';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+</script>
 </body>
+
 </html>
