@@ -238,7 +238,7 @@ if (GetDeviceType() === "desktop") {
 }
 window.addEventListener("DOMContentLoaded", () => {
     const typingText = document.getElementById("typing-text");
-    const text = `My name is <span class="text-purple-500">Ashish Kumar</span>`;
+    const text = `My name is <span class="text-purple-500"> Ashish Kumar </span>`;
     let charIndex = 0;
 
     function type() {
